@@ -1,6 +1,11 @@
-body {
-  background-color: #fff7e0;
+html *
+{
+   font-size: 0.95em !important;
+   font-family: Arial, Helvetica, sans-serif !important;
+   background-color: #fff;
 }
+
+
 hr {
   border-style: none;
   border-top-style: dotted;
@@ -21,3 +26,91 @@ h3 {
     font-weight: 800 ;
 }
 
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #fff; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 30px 30px;
+}
+
+/* The navigation menu links */
+
+
+.sidenav a {
+  padding: 4px 6px 4px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+}
+
+.sidenav .homelink {
+  padding: 10px 6px 20px 16px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.sidenav .sub {
+  padding: 4px 6px 4px 25px;
+}
+
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  text-decoration: underline;
+}
+
+/* Style page content */
+.main {
+  margin-left: 230px;
+  margin-right: 60px;
+  margin-top: 80px; 
+  padding: 0px 10px;
+}
+
+.card {
+  color: white;
+  padding: 2rem;
+  height: 10rem;
+  width: 10rem;
+  background-repeat: no-repeat; 
+  background-size: contain;
+  vertical-align: left;
+}
+
+.cards {
+  max-width: 1200px;
+  float: left;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media (min-width: 700px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1300px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1600px) {
+  .cards { grid-template-columns: repeat(5, 1fr); }
+}
